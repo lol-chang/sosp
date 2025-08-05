@@ -5,10 +5,10 @@ from torchinfo import summary
 
 
 def load_angle_bert_model():
-
     angle = AnglE.from_pretrained(
-        r'angle-bert-base-uncased-nli-en-v1',
-        pooling_strategy='cls_avg').cuda()
+        'SeanLee97/angle-bert-base-uncased-nli-en-v1',
+        pooling_strategy='cls_avg'
+    ).cuda()
 
     return angle
 

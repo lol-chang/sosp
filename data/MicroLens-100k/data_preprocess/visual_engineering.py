@@ -6,28 +6,24 @@ from PIL import Image
 import requests
 import os
 
-
 def load_vit_model():
-
-    processor = ViTImageProcessor.from_pretrained(
-        r'vit-base-patch16-224-in21k')
-
-    model = ViTModel.from_pretrained(
-        r'vit-base-patch16-224-in21k')
-
+    processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224-in21k')
+    model = ViTModel.from_pretrained('google/vit-base-patch16-224-in21k')
     return processor, model
 
 
-def vit_visual_feature_extraction(processor, model, image_path):
+def vit_visual_feature_extraction(processor, model, image_path, device="cpu"):
 
     image = Image.open(image_path)
 
     inputs = processor(images=image, return_tensors="pt")
+
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
 
     outputs = model(**inputs)
 
     cls_output = outputs.last_hidden_state[:, 0, :]
 
     return (cls_output[0]).tolist()
-
 

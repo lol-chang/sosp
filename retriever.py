@@ -9,13 +9,11 @@ def compute_normalized_inner_product_similarity(vector1, vector2):
     vector1 = np.array(vector1)
 
     vector2 = np.array(vector2)
-    
-    # Here the consine similarity is the normalized inner product between two vectors.
+    vector2 = vector2.squeeze(axis=1)
 
-    similarity = cosine_similarity([vector1], vector2)
+    similarity = cosine_similarity(vector1, vector2)
 
     return (similarity[0]).tolist()
-
 
 def sort_and_take_top_k(id_list, similarity_list, k):
 
@@ -364,11 +362,11 @@ def stack_retrieved_feature(train_path, valid_path, test_path):
 
 if __name__ == "__main__":
 
-    train_path = r'train.pkl'
+    train_path = r'./data/MicroLens-100k/train.pkl'
 
-    valid_path = r'valid.pkl'
+    valid_path = r'./data/MicroLens-100k/valid.pkl'
 
-    test_path = r'test.pkl'
+    test_path = r'./data/MicroLens-100k/test.pkl'
 
     main('train', 20, train_path, valid_path, test_path)
 

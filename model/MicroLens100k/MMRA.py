@@ -9,7 +9,9 @@ class Model(nn.Module):
         super(Model, self).__init__()
 
         self.alpha = alpha
-
+        
+        self.relu = nn.ReLU() # 추가 
+        
         self.frame_num = frame_num
 
         self.feature_dim = feature_dim
