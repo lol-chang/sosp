@@ -1,3 +1,4 @@
 video_frames/
 .DS_Store
 __pycache__/
+*.pkl

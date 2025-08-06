@@ -29,13 +29,16 @@ data = []
 
 for idx, item_id in tqdm(list(enumerate(item_ids)), desc="전체 아이템 처리", unit="item"):
     title = titles[idx]
+
+
     # 텍스트 임베딩
     text_feat = angle_bert_textual_feature_extraction(angle_model, title)
 
     # 시각 임베딩: 프레임 여러 장에서 추출해서 [10, 768]로 스택
     visual_features = []
     for frame_idx in range(frames_per_video):
-        frame_path = os.path.join(frame_dir, f"{item_id}_{frame_idx}.jpg")
+        # frame_path = os.path.join(frame_dir, f"{item_id}_{frame_idx}.jpg")
+        frame_path = os.path.join(frame_dir, f"{item_id}_{frame_idx+1:02d}.jpg")
         if not os.path.exists(frame_path):
             print(f"⚠️ 프레임 누락: {frame_path}")
             break  # 프레임 다 없으면 이 아이템 스킵
