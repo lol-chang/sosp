@@ -1,42 +1,26 @@
 import pandas as pd
 
-# CSV 불러오기
 df = pd.read_csv('./MicroLens-100k_pairs.csv')
-
-# timestamp -> datetime 변환
 df['datetime'] = pd.to_datetime(df['timestamp'], unit='ms')
-
-# user, datetime 기준 정렬
 df = df.sort_values(by=['user', 'datetime'])
 
-# 시청 간격 계산
-df['gap_sec'] = df.groupby('user')['datetime'].diff().dt.total_seconds()
+# 다음 영상과의 시청 간격(초) 계산
+df['next_datetime'] = df.groupby('user')['datetime'].shift(-1)
+df['next_item'] = df.groupby('user')['item'].shift(-1)
 
-# 10분 넘으면 새 세션 시작 표시
-df['new_session'] = (df['gap_sec'] > 600) | (df['gap_sec'].isna())
+df['gap_to_next_sec'] = (df['next_datetime'] - df['datetime']).dt.total_seconds()
 
-# session_id 생성
-df['session_id'] = df.groupby('user')['new_session'].cumsum()
+# 10초 이상 30초 이하인 기록만 필터링
+df_filtered = df[(df['gap_to_next_sec'] >= 15) & (df['gap_to_next_sec'] <= 60)]
 
-# 세션별 기록 수 계산
-session_sizes = df.groupby(['user', 'session_id']).size().reset_index(name='count')
+# 원하는 형태로 포맷팅
+df_filtered['session_info'] = df_filtered.apply(
+    lambda r: f"{r['datetime'].strftime('%Y-%m-%d %H:%M:%S')} (item: {r['item']}) -> {r['next_datetime'].strftime('%Y-%m-%d %H:%M:%S')} (item: {r['next_item']})",
+    axis=1
+)
 
-# 2개 이상 기록 있는 세션만 필터링
-valid_sessions = session_sizes[session_sizes['count'] > 1]
+output_df = df_filtered[['user', 'session_info']]
 
-# 원본에서 valid 세션만 필터링
-df_valid = df.merge(valid_sessions[['user', 'session_id']], on=['user', 'session_id'])
+output_df.to_csv('./stamp/filtered_15to60s.csv', index=False, header=['user', 'session_info'])
 
-# session별로 datetime + item 정보 포맷팅
-def format_session_times(group):
-    return '\n'.join([f"{dt.strftime('%Y-%m-%d %H:%M:%S')} (item: {item})" for dt, item in zip(group['datetime'], group['item'])])
-
-session_groups = df_valid.groupby(['user', 'session_id']).apply(format_session_times).reset_index(name='session_times')
-
-# user별로 여러 세션을 '\n\n'으로 합침
-result = session_groups.groupby('user')['session_times'].apply('\n\n'.join).reset_index()
-
-# CSV 저장
-result.to_csv('./stamp/user_sessions_with_items.csv', index=False)
-
-print(result)
+print(output_df)
