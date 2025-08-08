@@ -8,13 +8,14 @@ from tqdm import tqdm
 import torch
 
 # 1. 경로 설정
-csv_path = "./MicroLens-50k_titles.csv"
+csv_path = "./MicroLens-100k_title_en.csv"
 frame_dir = "./data/MicroLens-100k/video_frames"
 output_pkl_path = "data.pkl"
 frames_per_video = 10
 
 # 2. 데이터 불러오기
-df = pd.read_csv(csv_path)
+df = pd.read_csv(csv_path, header=None, names=["item", "title"])
+
 titles = df['title'].tolist()
 item_ids = df['item'].tolist()  # id 리스트
 
@@ -29,8 +30,6 @@ data = []
 
 for idx, item_id in tqdm(list(enumerate(item_ids)), desc="전체 아이템 처리", unit="item"):
     title = titles[idx]
-
-
     # 텍스트 임베딩
     text_feat = angle_bert_textual_feature_extraction(angle_model, title)
 

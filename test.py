@@ -129,7 +129,7 @@ def test(args):
 
     test_data_loader = DataLoader(dataset=test_data, batch_size=batch_size, collate_fn=custom_collate_fn_partial)
 
-    model = torch.load(args.model_path)
+    model = torch.load(args.model_path, weights_only=False) # 수정 
 
     total_test_step = 0
 
@@ -206,8 +206,8 @@ if __name__ == "__main__":
 
     parser.add_argument('--batch_size', default=256, type=int, help='training batch size')
 
-    parser.add_argument('--dataset_id', default='MicroLens100k', type=str, help='id of dataset')
-
+    parser.add_argument('--dataset_id', default='MicroLens-100k', type=str, help='id of dataset')
+                                                
     parser.add_argument('--dataset_path', default='data', type=str, help='path of dataset folder')
 
     parser.add_argument('--model_id', default='MMRA', type=str, help='id of model')
@@ -225,7 +225,7 @@ if __name__ == "__main__":
     parser.add_argument('--label_dim', type=int, default=1, help='Dimension of labels')
 
     parser.add_argument('--model_path',
-                        default=r'',
+                        default=r'/home/changjin/바탕화면/sosp2/MMRA/train_results/train_MMRA_MicroLens-100k_MSE_2025-08-06_19-39-25/trained_model/model_11.pth',
                         type=str, help='path of trained model')
 
     args = parser.parse_args()

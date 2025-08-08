@@ -1,0 +1,15 @@
+2025-08-07 15:21:57,098 - INFO - Random Seed: 2024 
+2025-08-07 15:21:57,098 - INFO - Device: cuda:0 
+2025-08-07 15:21:57,098 - INFO - Model: /home/changjin/바탕화면/sosp2/MMRA/train_results/train_MMRA_MicroLens-100k_MSE_2025-08-06_19-39-25/trained_model/model_11.pth 
+2025-08-07 15:21:57,098 - INFO - Dataset: MicroLens-100k
+2025-08-07 15:21:57,098 - INFO - Metric: ['nRMSE', 'SRC', 'MAE']
+2025-08-07 15:21:57,098 - INFO - Number of retrieved items used in this testing: 10
+2025-08-07 15:21:57,098 - INFO - Alpha: 0.6
+2025-08-07 15:21:57,098 - INFO - Number of frames: 10
+2025-08-07 15:21:57,098 - INFO - Testing Starts!
+2025-08-07 15:22:09,552 - WARNING - [ Test Result ]:  
+ nRMSE = 0.7584585547447205
+SRC = 0.4943336752575337
+MAE = 1.1760357171297073
+
+2025-08-07 15:22:09,552 - INFO - Test is ended!

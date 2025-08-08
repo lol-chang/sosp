@@ -171,7 +171,13 @@ class Model(nn.Module):
 
     def forward(self, visual_feature, textual_feature, similarity, retrieved_visual_feature, retrieved_textual_feature,
                 retrieved_label):
-
+        # print("==== MMRA forward input shape ====")
+        # print("visual_feature:", visual_feature.shape)
+        # print("textual_feature:", textual_feature.shape)
+        # print("similarity:", similarity.shape)
+        # print("retrieved_visual_feature:", retrieved_visual_feature.shape)
+        # print("retrieved_textual_feature:", retrieved_textual_feature.shape)
+        # print("retrieved_label:", retrieved_label.shape)
         visual_feature_emb = self.visual_embedding(visual_feature)
 
         visual_feature_emb = self.tanh(visual_feature_emb)
@@ -216,7 +222,7 @@ class Model(nn.Module):
         r_t_v = torch.mul(T_f_star, V_f_star_)
 
         r_t_t = torch.mul(T_f_star, T_f_star_)
-
+        # print("concatenated feature shape : ", torch.cat([T_f_star, V_f_star, T_f_star_, V_f_star_, r_v_v, r_v_t, r_t_v, r_t_t, r_v_l, r_t_l], dim=2).shape)
         output = self.prediction_module(
             torch.cat([T_f_star, V_f_star, T_f_star_, V_f_star_, r_v_v, r_v_t, r_t_v, r_t_t, r_v_l, r_t_l], dim=2))
 

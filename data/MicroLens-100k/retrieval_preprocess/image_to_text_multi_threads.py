@@ -22,8 +22,8 @@ def convert_image_to_text(processor, model, image_path):
 
 def process_row(item_id, path, processor, model):
     current_text_list = []
-    for j in range(10):
-        image_path = os.path.join(path, f"{item_id}_{j}.jpg")
+    for j in range(1, 11):
+        image_path = os.path.join(path, f"{item_id}_{j:02d}.jpg") 
         if not os.path.exists(image_path):
             print(f"❌ 이미지 없음: {image_path}")
             current_text_list.append("")

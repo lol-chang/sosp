@@ -1,23 +1,20 @@
 import pickle
+import pprint
 
-def inspect_pickle_keys(path, index=0):
-    with open(path, 'rb') as f:
-        data = pickle.load(f)
+path = "./data/MicroLens-100k/all_data_with_recommend.pkl"
 
-    print("🔍 데이터 타입:", type(data))
+with open(path, 'rb') as f:
+    df = pickle.load(f)
 
-    if isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
-        print(f"📌 인덱스 {index}의 항목 key 목록:")
-        print(list(data[index].keys()))
+# item_id 컬럼을 정수형으로 변환
+df['item_id'] = df['item_id'].astype(int)
 
-    # DataFrame일 때 컬럼명 출력
-    elif 'pandas' in str(type(data)):
-        print("📌 DataFrame 컬럼명:")
-        print(data.columns.tolist())
+target_id = 8400
 
-    else:
-        print("❌ 예상한 구조가 아닙니다 (list of dict 또는 DataFrame 형태 아님)")
-
-if __name__ == "__main__":
-    path = "./train.pkl"  # DataFrame 피클 파일 경로
-    inspect_pickle_keys(path, index=0)
+# 해당 item_id가 있는지 확인 후 recommend 리스트 출력
+if target_id in df['item_id'].values:
+    recommend_list = df.loc[df['item_id'] == target_id, 'recommend'].values[0]
+    print(f"item_id {target_id}의 recommend 리스트:")
+    pprint.pprint(recommend_list)
+else:
+    print(f"❌ item_id {target_id}가 데이터에 없습니다.")

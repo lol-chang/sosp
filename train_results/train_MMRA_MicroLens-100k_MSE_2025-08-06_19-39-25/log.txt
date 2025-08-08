@@ -1,0 +1,174 @@
+2025-08-06 19:39:28,035 - INFO - Random Seed: 2024 
+2025-08-06 19:39:28,035 - INFO - Device: cuda:0 
+2025-08-06 19:39:28,035 - INFO - Model: MMRA 
+2025-08-06 19:39:28,035 - INFO - Dataset: MicroLens-100k
+2025-08-06 19:39:28,035 - INFO - Metric: MSE
+2025-08-06 19:39:28,035 - INFO - Optimizer: Adam(lr = 1e-05)
+2025-08-06 19:39:28,035 - INFO - Total Epoch: 100 Turns
+2025-08-06 19:39:28,035 - INFO - Early Stop: 20 Turns
+2025-08-06 19:39:28,035 - INFO - Batch Size: 64
+2025-08-06 19:39:28,035 - INFO - Number of retrieved items used in this training: 10
+2025-08-06 19:39:28,035 - INFO - Alpha: 0.6
+2025-08-06 19:39:28,035 - INFO - Number of frames: 10
+2025-08-06 19:39:28,035 - INFO - Training Starts!
+2025-08-06 19:39:28,035 - INFO - -----------------------------------Epoch 1 Start!-----------------------------------
+2025-08-06 19:41:22,910 - INFO - [ Epoch 1 (train) ]: loss = 1.4530692100524902
+2025-08-06 19:41:22,910 - INFO - [ Epoch 1 (valid) ]: total_loss = 63.603275299072266
+2025-08-06 19:41:22,910 - CRITICAL - Current Best Total Loss comes from Epoch 1 , min_total_loss = 63.603275299072266
+2025-08-06 19:41:22,948 - INFO - Model has been saved successfully!
+2025-08-06 19:41:22,948 - INFO - -----------------------------------Epoch 2 Start!-----------------------------------
+2025-08-06 19:43:16,324 - INFO - [ Epoch 2 (train) ]: loss = 1.2880384922027588
+2025-08-06 19:43:16,324 - INFO - [ Epoch 2 (valid) ]: total_loss = 60.341453552246094
+2025-08-06 19:43:16,324 - CRITICAL - Current Best Total Loss comes from Epoch 2 , min_total_loss = 60.341453552246094
+2025-08-06 19:43:16,369 - INFO - Model has been saved successfully!
+2025-08-06 19:43:16,369 - INFO - -----------------------------------Epoch 3 Start!-----------------------------------
+2025-08-06 19:45:09,844 - INFO - [ Epoch 3 (train) ]: loss = 1.3198421001434326
+2025-08-06 19:45:09,844 - INFO - [ Epoch 3 (valid) ]: total_loss = 59.562828063964844
+2025-08-06 19:45:09,844 - CRITICAL - Current Best Total Loss comes from Epoch 3 , min_total_loss = 59.562828063964844
+2025-08-06 19:45:09,882 - INFO - Model has been saved successfully!
+2025-08-06 19:45:09,882 - INFO - -----------------------------------Epoch 4 Start!-----------------------------------
+2025-08-06 19:47:03,029 - INFO - [ Epoch 4 (train) ]: loss = 1.3075261116027832
+2025-08-06 19:47:03,029 - INFO - [ Epoch 4 (valid) ]: total_loss = 59.10648727416992
+2025-08-06 19:47:03,029 - CRITICAL - Current Best Total Loss comes from Epoch 4 , min_total_loss = 59.10648727416992
+2025-08-06 19:47:03,065 - INFO - Model has been saved successfully!
+2025-08-06 19:47:03,065 - INFO - -----------------------------------Epoch 5 Start!-----------------------------------
+2025-08-06 19:48:56,292 - INFO - [ Epoch 5 (train) ]: loss = 1.3000514507293701
+2025-08-06 19:48:56,293 - INFO - [ Epoch 5 (valid) ]: total_loss = 58.76772689819336
+2025-08-06 19:48:56,293 - CRITICAL - Current Best Total Loss comes from Epoch 5 , min_total_loss = 58.76772689819336
+2025-08-06 19:48:56,337 - INFO - Model has been saved successfully!
+2025-08-06 19:48:56,337 - INFO - -----------------------------------Epoch 6 Start!-----------------------------------
+2025-08-06 19:50:49,265 - INFO - [ Epoch 6 (train) ]: loss = 1.2701740264892578
+2025-08-06 19:50:49,265 - INFO - [ Epoch 6 (valid) ]: total_loss = 58.51675033569336
+2025-08-06 19:50:49,265 - CRITICAL - Current Best Total Loss comes from Epoch 6 , min_total_loss = 58.51675033569336
+2025-08-06 19:50:49,309 - INFO - Model has been saved successfully!
+2025-08-06 19:50:49,309 - INFO - -----------------------------------Epoch 7 Start!-----------------------------------
+2025-08-06 19:52:42,758 - INFO - [ Epoch 7 (train) ]: loss = 1.2509404420852661
+2025-08-06 19:52:42,758 - INFO - [ Epoch 7 (valid) ]: total_loss = 58.341312408447266
+2025-08-06 19:52:42,758 - CRITICAL - Current Best Total Loss comes from Epoch 7 , min_total_loss = 58.341312408447266
+2025-08-06 19:52:42,795 - INFO - Model has been saved successfully!
+2025-08-06 19:52:42,796 - INFO - -----------------------------------Epoch 8 Start!-----------------------------------
+2025-08-06 19:54:35,903 - INFO - [ Epoch 8 (train) ]: loss = 1.2389843463897705
+2025-08-06 19:54:35,903 - INFO - [ Epoch 8 (valid) ]: total_loss = 58.221195220947266
+2025-08-06 19:54:35,903 - CRITICAL - Current Best Total Loss comes from Epoch 8 , min_total_loss = 58.221195220947266
+2025-08-06 19:54:35,940 - INFO - Model has been saved successfully!
+2025-08-06 19:54:35,940 - INFO - -----------------------------------Epoch 9 Start!-----------------------------------
+2025-08-06 19:56:28,911 - INFO - [ Epoch 9 (train) ]: loss = 1.232771396636963
+2025-08-06 19:56:28,911 - INFO - [ Epoch 9 (valid) ]: total_loss = 58.155548095703125
+2025-08-06 19:56:28,911 - CRITICAL - Current Best Total Loss comes from Epoch 9 , min_total_loss = 58.155548095703125
+2025-08-06 19:56:28,955 - INFO - Model has been saved successfully!
+2025-08-06 19:56:28,955 - INFO - -----------------------------------Epoch 10 Start!-----------------------------------
+2025-08-06 19:58:21,899 - INFO - [ Epoch 10 (train) ]: loss = 1.2175164222717285
+2025-08-06 19:58:21,899 - INFO - [ Epoch 10 (valid) ]: total_loss = 58.13045120239258
+2025-08-06 19:58:21,899 - CRITICAL - Current Best Total Loss comes from Epoch 10 , min_total_loss = 58.13045120239258
+2025-08-06 19:58:21,943 - INFO - Model has been saved successfully!
+2025-08-06 19:58:21,943 - INFO - -----------------------------------Epoch 11 Start!-----------------------------------
+2025-08-06 20:00:15,082 - INFO - [ Epoch 11 (train) ]: loss = 1.1957449913024902
+2025-08-06 20:00:15,082 - INFO - [ Epoch 11 (valid) ]: total_loss = 58.127559661865234
+2025-08-06 20:00:15,082 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:00:15,121 - INFO - Model has been saved successfully!
+2025-08-06 20:00:15,121 - INFO - -----------------------------------Epoch 12 Start!-----------------------------------
+2025-08-06 20:02:08,386 - INFO - [ Epoch 12 (train) ]: loss = 1.1764178276062012
+2025-08-06 20:02:08,386 - INFO - [ Epoch 12 (valid) ]: total_loss = 58.159637451171875
+2025-08-06 20:02:08,386 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:02:08,423 - INFO - Model has been saved successfully!
+2025-08-06 20:02:08,423 - INFO - -----------------------------------Epoch 13 Start!-----------------------------------
+2025-08-06 20:04:01,580 - INFO - [ Epoch 13 (train) ]: loss = 1.157245397567749
+2025-08-06 20:04:01,580 - INFO - [ Epoch 13 (valid) ]: total_loss = 58.20853805541992
+2025-08-06 20:04:01,580 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:04:01,627 - INFO - Model has been saved successfully!
+2025-08-06 20:04:01,627 - INFO - -----------------------------------Epoch 14 Start!-----------------------------------
+2025-08-06 20:05:54,714 - INFO - [ Epoch 14 (train) ]: loss = 1.1389859914779663
+2025-08-06 20:05:54,714 - INFO - [ Epoch 14 (valid) ]: total_loss = 58.267799377441406
+2025-08-06 20:05:54,714 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:05:54,758 - INFO - Model has been saved successfully!
+2025-08-06 20:05:54,758 - INFO - -----------------------------------Epoch 15 Start!-----------------------------------
+2025-08-06 20:07:47,804 - INFO - [ Epoch 15 (train) ]: loss = 1.1221414804458618
+2025-08-06 20:07:47,804 - INFO - [ Epoch 15 (valid) ]: total_loss = 58.353912353515625
+2025-08-06 20:07:47,804 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:07:47,848 - INFO - Model has been saved successfully!
+2025-08-06 20:07:47,848 - INFO - -----------------------------------Epoch 16 Start!-----------------------------------
+2025-08-06 20:09:40,964 - INFO - [ Epoch 16 (train) ]: loss = 1.1068475246429443
+2025-08-06 20:09:40,964 - INFO - [ Epoch 16 (valid) ]: total_loss = 58.44557189941406
+2025-08-06 20:09:40,964 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:09:41,008 - INFO - Model has been saved successfully!
+2025-08-06 20:09:41,008 - INFO - -----------------------------------Epoch 17 Start!-----------------------------------
+2025-08-06 20:11:33,844 - INFO - [ Epoch 17 (train) ]: loss = 1.0913951396942139
+2025-08-06 20:11:33,844 - INFO - [ Epoch 17 (valid) ]: total_loss = 58.545528411865234
+2025-08-06 20:11:33,844 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:11:33,882 - INFO - Model has been saved successfully!
+2025-08-06 20:11:33,882 - INFO - -----------------------------------Epoch 18 Start!-----------------------------------
+2025-08-06 20:13:26,794 - INFO - [ Epoch 18 (train) ]: loss = 1.075829267501831
+2025-08-06 20:13:26,794 - INFO - [ Epoch 18 (valid) ]: total_loss = 58.653968811035156
+2025-08-06 20:13:26,794 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:13:26,837 - INFO - Model has been saved successfully!
+2025-08-06 20:13:26,837 - INFO - -----------------------------------Epoch 19 Start!-----------------------------------
+2025-08-06 20:15:20,039 - INFO - [ Epoch 19 (train) ]: loss = 1.0611388683319092
+2025-08-06 20:15:20,039 - INFO - [ Epoch 19 (valid) ]: total_loss = 58.78190231323242
+2025-08-06 20:15:20,039 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:15:20,077 - INFO - Model has been saved successfully!
+2025-08-06 20:15:20,077 - INFO - -----------------------------------Epoch 20 Start!-----------------------------------
+2025-08-06 20:17:13,338 - INFO - [ Epoch 20 (train) ]: loss = 1.045642375946045
+2025-08-06 20:17:13,338 - INFO - [ Epoch 20 (valid) ]: total_loss = 58.92082595825195
+2025-08-06 20:17:13,338 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:17:13,376 - INFO - Model has been saved successfully!
+2025-08-06 20:17:13,376 - INFO - -----------------------------------Epoch 21 Start!-----------------------------------
+2025-08-06 20:19:06,364 - INFO - [ Epoch 21 (train) ]: loss = 1.030762791633606
+2025-08-06 20:19:06,364 - INFO - [ Epoch 21 (valid) ]: total_loss = 59.07984161376953
+2025-08-06 20:19:06,364 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:19:06,403 - INFO - Model has been saved successfully!
+2025-08-06 20:19:06,403 - INFO - -----------------------------------Epoch 22 Start!-----------------------------------
+2025-08-06 20:20:59,312 - INFO - [ Epoch 22 (train) ]: loss = 1.0181611776351929
+2025-08-06 20:20:59,312 - INFO - [ Epoch 22 (valid) ]: total_loss = 59.25700759887695
+2025-08-06 20:20:59,312 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:20:59,357 - INFO - Model has been saved successfully!
+2025-08-06 20:20:59,357 - INFO - -----------------------------------Epoch 23 Start!-----------------------------------
+2025-08-06 20:22:52,600 - INFO - [ Epoch 23 (train) ]: loss = 0.9945335984230042
+2025-08-06 20:22:52,600 - INFO - [ Epoch 23 (valid) ]: total_loss = 59.45633316040039
+2025-08-06 20:22:52,600 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:22:52,638 - INFO - Model has been saved successfully!
+2025-08-06 20:22:52,638 - INFO - -----------------------------------Epoch 24 Start!-----------------------------------
+2025-08-06 20:24:45,809 - INFO - [ Epoch 24 (train) ]: loss = 0.9668200612068176
+2025-08-06 20:24:45,809 - INFO - [ Epoch 24 (valid) ]: total_loss = 59.63530731201172
+2025-08-06 20:24:45,809 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:24:45,847 - INFO - Model has been saved successfully!
+2025-08-06 20:24:45,847 - INFO - -----------------------------------Epoch 25 Start!-----------------------------------
+2025-08-06 20:26:38,939 - INFO - [ Epoch 25 (train) ]: loss = 0.9398941993713379
+2025-08-06 20:26:38,939 - INFO - [ Epoch 25 (valid) ]: total_loss = 59.83570098876953
+2025-08-06 20:26:38,939 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:26:38,977 - INFO - Model has been saved successfully!
+2025-08-06 20:26:38,977 - INFO - -----------------------------------Epoch 26 Start!-----------------------------------
+2025-08-06 20:28:31,818 - INFO - [ Epoch 26 (train) ]: loss = 0.9129041433334351
+2025-08-06 20:28:31,818 - INFO - [ Epoch 26 (valid) ]: total_loss = 60.058048248291016
+2025-08-06 20:28:31,818 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:28:31,862 - INFO - Model has been saved successfully!
+2025-08-06 20:28:31,862 - INFO - -----------------------------------Epoch 27 Start!-----------------------------------
+2025-08-06 20:30:24,699 - INFO - [ Epoch 27 (train) ]: loss = 0.8838081359863281
+2025-08-06 20:30:24,699 - INFO - [ Epoch 27 (valid) ]: total_loss = 60.25727081298828
+2025-08-06 20:30:24,699 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:30:24,744 - INFO - Model has been saved successfully!
+2025-08-06 20:30:24,745 - INFO - -----------------------------------Epoch 28 Start!-----------------------------------
+2025-08-06 20:32:17,933 - INFO - [ Epoch 28 (train) ]: loss = 0.8577274084091187
+2025-08-06 20:32:17,933 - INFO - [ Epoch 28 (valid) ]: total_loss = 60.490753173828125
+2025-08-06 20:32:17,933 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:32:17,977 - INFO - Model has been saved successfully!
+2025-08-06 20:32:17,977 - INFO - -----------------------------------Epoch 29 Start!-----------------------------------
+2025-08-06 20:34:11,186 - INFO - [ Epoch 29 (train) ]: loss = 0.8328865766525269
+2025-08-06 20:34:11,186 - INFO - [ Epoch 29 (valid) ]: total_loss = 60.73644256591797
+2025-08-06 20:34:11,186 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:34:11,231 - INFO - Model has been saved successfully!
+2025-08-06 20:34:11,231 - INFO - -----------------------------------Epoch 30 Start!-----------------------------------
+2025-08-06 20:36:04,601 - INFO - [ Epoch 30 (train) ]: loss = 0.8129513263702393
+2025-08-06 20:36:04,601 - INFO - [ Epoch 30 (valid) ]: total_loss = 60.998802185058594
+2025-08-06 20:36:04,601 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:36:04,640 - INFO - Model has been saved successfully!
+2025-08-06 20:36:04,640 - INFO - -----------------------------------Epoch 31 Start!-----------------------------------
+2025-08-06 20:37:57,624 - INFO - [ Epoch 31 (train) ]: loss = 0.7935894727706909
+2025-08-06 20:37:57,624 - INFO - [ Epoch 31 (valid) ]: total_loss = 61.28324508666992
+2025-08-06 20:37:57,624 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:37:57,663 - INFO - Model has been saved successfully!
+2025-08-06 20:37:57,663 - INFO - -----------------------------------Epoch 32 Start!-----------------------------------
+2025-08-06 20:39:50,799 - INFO - [ Epoch 32 (train) ]: loss = 0.7748546600341797
+2025-08-06 20:39:50,799 - INFO - [ Epoch 32 (valid) ]: total_loss = 61.59336853027344
+2025-08-06 20:39:50,799 - CRITICAL - Current Best Total Loss comes from Epoch 11 , min_total_loss = 58.127559661865234
+2025-08-06 20:39:50,843 - INFO - Model has been saved successfully!
+2025-08-06 20:39:50,991 - INFO - Training is ended!
