@@ -11,7 +11,7 @@ df['next_item'] = df.groupby('user')['item'].shift(-1)
 df['gap_to_next_sec'] = (df['next_datetime'] - df['datetime']).dt.total_seconds()
 
 # 10초 이상 30초 이하인 기록만 필터링
-df_filtered = df[(df['gap_to_next_sec'] >= 15) & (df['gap_to_next_sec'] <= 60)]
+df_filtered = df[(df['gap_to_next_sec'] >= 15) & (df['gap_to_next_sec'] <= 300)]
 
 # 원하는 형태로 포맷팅
 df_filtered['session_info'] = df_filtered.apply(
@@ -21,6 +21,6 @@ df_filtered['session_info'] = df_filtered.apply(
 
 output_df = df_filtered[['user', 'session_info']]
 
-output_df.to_csv('./stamp/filtered_15to60s.csv', index=False, header=['user', 'session_info'])
+output_df.to_csv('./stamp/filtered_15to300s.csv', index=False, header=['user', 'session_info'])
 
 print(output_df)

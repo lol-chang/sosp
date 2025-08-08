@@ -9,7 +9,7 @@ with open(path, 'rb') as f:
 # item_id 컬럼을 정수형으로 변환
 df['item_id'] = df['item_id'].astype(int)
 
-target_id = 8906
+target_id = 9350
 
 # 해당 item_id가 있는지 확인 후 recommend 리스트 출력
 if target_id in df['item_id'].values:

@@ -1,7 +1,7 @@
 import pandas as pd
 import pickle
 
-df = pd.read_csv('./stamp/filtered_15to60s.csv')
+df = pd.read_csv('./stamp/filtered_15to30s.csv')
 
 df['item_id'] = df['session_info'].str.extract(r'\(item: (\d+)\)').astype(int)
 df['next_item'] = df['session_info'].str.extract(r'-> .* \(item: ([\d\.]+)\)').iloc[:,0].astype(float).astype('Int64')
@@ -25,8 +25,18 @@ def cache_hit_first_view(row, first_item_map, recommend_dict):
     next_item = row['next_item']
     if pd.isna(next_item) or first_item is None:
         return False
+
+    # next_item을 확실히 int로 변환 (nullable int는 float 타입도 있음)
+    try:
+        next_item_int = int(next_item)
+    except:
+        return False
+
     rec_list = recommend_dict.get(first_item, [])
-    return next_item in rec_list
+    # 추천 리스트도 모두 int로 맞춰주기
+    rec_list_int = [int(x) for x in rec_list]
+
+    return next_item_int in rec_list_int
 
 df['cache_hit'] = df.apply(lambda row: cache_hit_first_view(row, first_item_map, recommend_dict), axis=1)
 
